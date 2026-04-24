@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@400;500;600;700;800&family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Bebas+Neue&display=swap');
+
+:root {
+  --bg:          #030307;
+  --bg1:         #07070f;
+  --bg2:         #0a0a14;
+  --surface:     #13132a;
+  --surface2:    #18183a;
+  --violet:      #6C47FF;
+  --violet-dim:  rgba(108,71,255,0.12);
+  --mint:        #00D4AA;
+  --mint-dim:    rgba(0,212,170,0.12);
+  --cyan:        #00D4FF;
+  --red:         #FF3B5C;
+  --amber:       #FFB547;
+  --border:      rgba(108,71,255,0.12);
+  --border2:     rgba(108,71,255,0.25);
+  --border3:     rgba(108,71,255,0.5);
+  --text:        #E8E8F0;
+  --text2:       #8888a8;
+  --text3:       #4a4a6a;
+  --font-ui:     'Syne', sans-serif;
+  --font-mono:   'DM Mono', monospace;
+  --font-hero:   'Bebas Neue', sans-serif;
+  --radius:      8px;
+  --radius-lg:   14px;
+  --tr:          0.18s cubic-bezier(0.4,0,0.2,1);
+}
+
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+html {
+  font-size: 14px;
+  -webkit-font-smoothing: antialiased;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-ui);
+  overflow-x: hidden;
+}
+
+::-webkit-scrollbar { width: 4px; }
+::-webkit-scrollbar-track { background: var(--bg2); }
+::-webkit-scrollbar-thumb { background: var(--border2); border-radius: 2px; }
+::-webkit-scrollbar-thumb:hover { background: var(--violet); }
+
+a { color: inherit; text-decoration: none; }
+
+button { cursor: pointer; font-family: var(--font-ui); }
+
+input, textarea, select {
+  font-family: var(--font-mono);
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  color: var(--text);
+  outline: none;
+  transition: border-color var(--tr);
+}
+
+input:focus, textarea:focus, select:focus {
+  border-color: var(--border2);
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: var(--violet);
+  border: 1px solid var(--border3);
+  border-radius: var(--radius-lg);
+  color: #fff;
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  transition: all var(--tr);
+}
+.btn-primary:hover {
+  box-shadow: 0 0 24px rgba(108,71,255,0.5), 0 0 60px rgba(108,71,255,0.15);
+  transform: translateY(-2px);
+}
+
+.btn-secondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: transparent;
+  border: 1px solid var(--border2);
+  border-radius: var(--radius-lg);
+  color: var(--text2);
+  font-size: 14px;
+  font-weight: 600;
+  transition: all var(--tr);
+}
+.btn-secondary:hover {
+  background: var(--surface);
+  color: var(--text);
+  border-color: var(--border3);
+}
+
+.badge {
+  font-family: var(--font-mono);
+  font-size: 9px;
+  padding: 2px 8px;
+  border-radius: 4px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 600;
+}
