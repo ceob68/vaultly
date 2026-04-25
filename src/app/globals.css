@@ -112,3 +112,102 @@ input:focus, textarea:focus, select:focus {
   letter-spacing: 1px;
   font-weight: 600;
 }
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE — Mobile First
+   ══════════════════════════════════════════════ */
+
+/* Tablet (768px) */
+@media (max-width: 768px) {
+  /* Ticker bar */
+  .ticker-bar { height: 40px; }
+  .ticker-items { overflow-x: auto; }
+  .ticker-item { padding: 0 12px; }
+  .ticker-actions { padding: 0 10px; }
+  .ticker-logo span { font-size: 15px; letter-spacing: 2px; }
+
+  /* Nav secondary */
+  .nav-bar { padding: 0 16px; overflow-x: auto; }
+  .nav-cats { gap: 0; }
+  .nav-cat { padding: 0 10px; font-size: 10px; white-space: nowrap; }
+  .nav-search { display: none; }
+
+  /* Hero */
+  .hero { padding: 40px 20px; }
+  .hero-title { font-size: 56px; }
+  .hero-btns { flex-direction: column; align-items: center; gap: 10px; }
+  .hero-stats { flex-wrap: wrap; justify-content: center; gap: 2px; }
+  .h-stat { min-width: 100px; padding: 10px 14px; }
+
+  /* Products grid → 2 columnas */
+  .products-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 10px; }
+
+  /* Categories grid → 3 columnas */
+  .cats-grid { grid-template-columns: repeat(3, 1fr) !important; gap: 8px; }
+  .cat-card { padding: 14px 10px; }
+  .cat-icon { font-size: 20px; margin-bottom: 6px; }
+
+  /* How grid → 2 columnas */
+  .how-grid { grid-template-columns: repeat(2, 1fr) !important; gap: 2px; }
+  .how-step:first-child { border-radius: var(--radius-lg) 0 0 0; }
+  .how-step:last-child { border-radius: 0 0 var(--radius-lg) 0; }
+
+  /* Featured banner */
+  .featured-banner { grid-template-columns: 1fr !important; gap: 24px; padding: 24px 20px; }
+  .fb-title { font-size: 28px; }
+  .fb-price-block { text-align: left; }
+  .fb-price { font-size: 32px; }
+
+  /* Section padding */
+  .section { padding: 40px 16px; }
+  .divider { margin: 0 16px; }
+
+  /* Trust bar */
+  .trust-bar { flex-wrap: wrap; gap: 14px; padding: 16px 20px; justify-content: flex-start; }
+
+  /* Footer */
+  .footer { padding: 32px 20px; }
+  .footer-grid { grid-template-columns: 1fr 1fr !important; gap: 28px; }
+  .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
+  .footer-crypto { justify-content: center; flex-wrap: wrap; }
+}
+
+/* Mobile (480px) */
+@media (max-width: 480px) {
+  /* Hero */
+  .hero-title { font-size: 42px; letter-spacing: 2px; }
+  .hero-sub { font-size: 10px; }
+  .hero-desc { font-size: 13px; }
+  .hero-stats { gap: 1px; }
+  .h-stat { min-width: 80px; padding: 8px 10px; }
+  .h-stat .hs-val { font-size: 17px; }
+
+  /* Products grid → 1 columna */
+  .products-grid { grid-template-columns: 1fr !important; }
+
+  /* Categories → 2 columnas */
+  .cats-grid { grid-template-columns: repeat(2, 1fr) !important; }
+
+  /* How → 1 columna */
+  .how-grid { grid-template-columns: 1fr !important; }
+  .how-step:first-child { border-radius: var(--radius-lg) var(--radius-lg) 0 0; }
+  .how-step:last-child { border-radius: 0 0 var(--radius-lg) var(--radius-lg); }
+
+  /* Footer → 1 columna */
+  .footer-grid { grid-template-columns: 1fr !important; }
+
+  /* Section title */
+  .section-title { font-size: 22px; }
+
+  /* Featured */
+  .fb-title { font-size: 24px; }
+  .fb-price { font-size: 28px; }
+
+  /* Trust bar */
+  .trust-bar { flex-direction: column; gap: 10px; }
+
+  /* Nav */
+  .nav-cat .cat-count { display: none; }
+  .ticker-logo { padding: 0 12px; }
+  .vlt-mark { width: 20px; height: 20px; }
+}
